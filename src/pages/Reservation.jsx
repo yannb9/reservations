@@ -55,12 +55,12 @@ export function Reservation() {
 
             <GuestList>
                 {/* this will be a row */}
-                <Guest 
+                {/* <Guest 
                     name="Yann Bohbot"
                     starter="Fish & Chips"
                     main="Steak"
                     dessert="Cake"
-                />
+                /> */}
                 {guest.map((guest, index)=>{
                         return(
                             <Guest

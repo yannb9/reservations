@@ -2,7 +2,6 @@ import { useState, useEffect } from "react"
 import { Link, NavLink, Route, Routes, useLocation } from "react-router-dom"
 import { Home } from "./pages/Home"
 import { Reservation } from "./pages/Reservation"
-import { Test } from "./pages/Test"
 import Menu from "./components/Menu"
 import { GoBack } from "./components/GoBack"
 import { colorModeContext, useMode } from "./theme";
@@ -23,18 +22,16 @@ function App() {
     <colorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Menu>
+        <Menu theme={theme}>
           {location.pathname == '/reservation' && <NavLink to="/"><GoBack /></NavLink>}
           <NavLink to="/" className='nav'>Home</NavLink>
           <NavLink to="/reservation" className='nav'>Reservations</NavLink>
-          <NavLink to="test" className='nav'>Testing</NavLink>
           <Switch checked={checked} onChange={handleChange} />
         </Menu>
         <div className="wrapper">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/reservation" element={<Reservation />} />
-            <Route path="/test" element={<Test />} />
           </Routes>
         </div>
       </ThemeProvider>
