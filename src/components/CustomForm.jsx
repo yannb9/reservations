@@ -38,7 +38,7 @@ export const CustomForm = ({addGuest}) =>{
                 />
                 <SelectFrom label="Starters" value={starter} options={starterOptions} onChange={(e)=>setStarter(e.target.value)}/>
                 <SelectFrom label="Main Course" value={main} options={mainCourseOptions} onChange={(e)=>setMain(e.target.value)}/>
-                <SelectFrom label="Starters" value={dessert} options={dessertOptions} onChange={(e)=>setDessert(e.target.value)}/>
+                <SelectFrom label="Dessert" value={dessert} options={dessertOptions} onChange={(e)=>setDessert(e.target.value)}/>
             </div>
                 <Button variant="contained" type="submit" size="medium">Add Guest</Button>
         </form>

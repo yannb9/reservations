@@ -55,12 +55,16 @@ export function Reservation() {
 
             <GuestList>
                 {/* this will be a row */}
-                {/* <Guest 
+                <Guest
+                    guest={guest}
                     name="Yann Bohbot"
-                    starter="Fish & Chips"
-                    main="Steak"
-                    dessert="Cake"
-                /> */}
+                    starter="Salad"
+                    main="Fillet Steak"
+                    dessert="Tarte Au Citron"
+                    deleteGuest={deleteGuest}
+                    editGuest={editGuest}
+                    openEditModal={openEditModal}
+                />
                 {guest.map((guest, index)=>{
                         return(
                             <Guest
